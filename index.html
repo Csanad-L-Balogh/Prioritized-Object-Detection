@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Strategically navigating through datasets via information value-based prioritization yields performance enhancements in Supervised Learning scenarios">
+  <meta name="keywords" content="Smarter Sampling">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./static/images/logo.ico?"/>
+  <title>Smarter Sampling: Data Prioritization for Improved Object Detection</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/academicons.min.css"/>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <img src="static/images/thumbnail.png" alt="Smarter Sampling:" width="5000" height="3000"/>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Data Prioritization for Improved Object Detection</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=p0eQRMAAAAAJ&hl=en" target="_blank">Csanád L. Balogh</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="" target="_blank">Bence Szilárd Pap</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=WrtttXEAAAAJ&hl=en" target="_blank">Bálint Kővári</a><sup>1,2</sup></span>
+            <span class="author-block">
+              and <a href="https://scholar.google.com/citations?user=Sdw_b5YAAAAJ&hl=en" target="_blank">Tamás Bécsi</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Department of Control for Transportation and Vehicle Systems, Faculty of Transportation Engineering and Vehicle Engineering, Budapest University of Technology and Economics</span>
+            <span class="author-block"><sup>2</sup>Asura Technologies Ltd.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/csanadlb/sl_prioritized_sampling"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The effectiveness of deep learning models is strongly influenced by the quality of training data. Traditional training approaches assume that all samples contribute equally to the learning process, leading to uniform data sampling. However, this assumption does not account for the varying informational content of different samples. This paper presents a novel data prioritization method for object detection that dynamically adjusts the sampling probability of training data based on its relevance. Focusing on object detection applications within the computer vision field, the proposed methodology introduces the Relative Detection Error metric to evaluate and prioritize samples during training. By selecting data points with higher informational value, our approach improves both classification and localization accuracy while maintaining minimal computational overhead. The method is demonstrated using YOLO architectures on diverse datasets, showcasing its ability to generalize across different settings. Experimental results indicate that prioritizing high-value samples enhances the F1 score and mean Average Precision (mAP), leading to more efficient training and robust performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+    <!--/ Abstract. -->
+
+<hr/>
+
+<!-- Machine Learning. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Machine Learning</h2>
+
+    <!-- Reinforcement Learning -->
+    <h3 class="title is-4">Reinforcement Learning</h3>
+    <div class="columns is-centered">
+      <!-- Image Column for Reinforcement Learning -->
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="./static/images/dqn_schematic.png" width="400" height="400"/>
+        </div>
+      </div>
+
+      <!-- Text Column for Reinforcement Learning -->
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <p>
+            Soon
+          </p>
+          <p>
+            Soon
+          </p>
+          <p>
+            Soon
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supervised Learning -->
+    <h3 class="title is-4">Supervised Learning</h3>
+    <div class="columns is-centered">
+      <!-- Text Column for Supervised Learning -->
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <p>
+            Soon
+          </p>
+          <p>
+            Soon
+          </p>
+        </div>
+      </div>
+
+      <!-- Image Column for Supervised Learning -->
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="./static/images/sl.png" width="400" height="400"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Machine Learning. -->
+
+<hr/>
+
+<!-- Methodology. -->
+<div class="container is-max-desktop">
+    <div class="content has-text-justified">
+      <h2 class="title is-3">Our Concept</h2>
+      <p>
+        Soon
+      </p>
+      <p>
+        Soon
+      </p>
+      <div class="has-text-centered">
+        <img src="./static/images/supervised_learning_prioritization.png"/>
+      </div>
+    </div>
+</div>
+<!--/ Methodology. -->
+
+
+
+<hr/>
+
+<!-- Results. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results</h2>
+
+    <!-- Convergence -->
+    <h3 class="title is-4">Validation Accuracy</h3>
+    <div class="columns is-centered">
+      <!-- Text Column for Convergence -->
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <p>
+            Soon
+          </p>
+        </div>
+      </div>
+
+      <!-- Image Column for Convergence -->
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="static/images/convergence.png" width="350" height="350"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- t-SNE -->
+    <h3 class="title is-4">Sampling Distribution</h3>
+    <div class="columns is-centered">
+
+      <!-- Image Column for t-SNE -->
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="./static/images/tsne.png" width="600" height="600"/>
+        </div>
+      </div>
+
+      <!-- Text Column for t-SNE -->
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <p>
+            Soon
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!--/ Results. -->
+
+<hr/>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <p>
+      Please use this BibTeX in case you would like to cite our work in your publications:
+    </p>
+    <pre><code>@article{,
+  author    = {Balogh, Csan{\'a}d L. and Pap, Bence Szil{\'a}rd and K{\H o}v{\'a}ri, B{\'a}lint and B{\'e}csi, Tam{\'a}s},
+  title     = {Smarter Sampling: Data Prioritization for Improved Object Detection},
+  journal   = {},
+  volume    = {},
+  number    = {},
+  pages     = {},
+  year      = {},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content">
+          <p>
+            This website is constructed using the source code provided by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, allow us to express our appreciation for their contribution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
